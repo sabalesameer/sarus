@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - XYZ Drones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
+            }
+
+            body {
+                display: flex;
+                height: 100vh;
+                background-color: #f4f4f4;
+                padding: 0;
+            }
+
+            /* Left Section */
+            .left-section {
+                flex: 1;
+                background: url('/7706828.jpg') no-repeat center center/cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                color: rgb(0, 0, 0);
+                padding: 20px;
+                text-align: center;
+                min-height: 100vh;
+            }
+
+            .logo {
+                width: 80px;
+                margin-bottom: 15px;
+            }
+
+            .left-section h3 {
+                font-size: 24px;
+                font-weight: 600;
+            }
+
+            .left-section p {
+                font-size: 16px;
+                margin: 10px 0;
+                max-width: 300px;
+            }
+
+            .social-icons {
+                margin-top: 20px;
+            }
+
+            .social-icons a img {
+                width: 30px;
+                margin: 0 8px;
+                transition: 0.3s;
+            }
+
+            .social-icons a img:hover {
+                opacity: 0.7;
+            }
+
+            /* Right Section */
+            .right-section {
+                width: 40vw;
+                height: 100vh;
+                background: white;
+                padding: 30px;
+                border-radius: 12px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                animation: fadeIn 0.5s ease-in-out;
+            }
+
+            h2 {
+                text-align: left;
+                font-size: 22px;
+                font-weight: 600;
+                color: #333;
+            }
+
+            p {
+                font-size: 14px;
+                color: #666;
+                margin-bottom: 15px;
+            }
+
+            /* Form Inputs */
+            form {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .input-row {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .input-group {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 12px;
+                margin-right: 10px;
+            }
+
+            .input-group:last-child {
+                margin-right: 0;
+            }
+
+            label {
+                font-size: 12px;
+                font-weight: 600;
+                color: #444;
+                margin-bottom: 5px;
+            }
+
+            input, textarea {
+                padding: 10px;
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                font-size: 14px;
+                width: 100%;
+            }
+
+            textarea {
+                resize: none;
+            }
+
+            .send-btn {
+                padding: 12px;
+                background: #1e3c72;
+                color: white;
+                border: none;
+                cursor: pointer;
+                border-radius: 6px;
+                font-size: 16px;
+                transition: 0.3s;
+            }
+
+            .send-btn:hover {
+                background: #2a5298;
+            }
+
+            /* Close Button */
+            .close-btn {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: transparent;
+                border: none;
+                font-size: 18px;
+                cursor: pointer;
+                color: #777;
+            }
+
+            .close-btn:hover {
+                color: #333;
+            }
+
+            /* Animations */
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* Responsive Design */
+            @media (max-width: 1024px) {
+                body {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .left-section {
+                    display: none;
+                }
+
+                .right-section {
+                    width: 90vw;
+                    height: auto;
+                }
+            }
+
+    </style>
+</head>
+<body>
+
+    <!-- Left Section -->
+    <div class="left-section">
+        <img src="dron1.png" alt="XYZ Drones Logo" class="logo">
+        <h3>sarus airospace</h3>
+        <p>Innovating the future of aerial robotics and drone technology.</p>
+        <div class="social-icons">
+            <a href="#"><img src="social.png" alt="Telegram"></a>
+            <a href="#"><img src="social.png" alt="LinkedIn"></a>
+            <a href="#"><img src="social.png" alt="Facebook"></a>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <button class="close-btn">X</button>
+        <h2>GET IN TOUCH</h2>
+        <p>Our team is available 24/7 to assist you with any inquiries.</p>
+        <form>
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="Your First Name">
+                </div>
+                <div class="input-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Your Last Name">
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Your Phone Number">
+            </div>
+            <div class="input-group">
+                <label for="message">Describe your issue</label>
+                <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+            <button type="submit" class="send-btn">Send</button>
+        </form>
+    </div>
+
+</body>
+</html>

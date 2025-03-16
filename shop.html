@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Page</title>
+  <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+
+  <header>
+    <h1>Drone Shop</h1>
+  </header>
+
+  <div class="filter-container">
+    <button onclick="filterProducts('all')">All</button>
+    <button onclick="filterProducts('battery')">Battery</button>
+    <button onclick="filterProducts('motor')">Motor</button>
+    <button onclick="filterProducts('wire')">Wire</button>
+    <button onclick="filterProducts('propeller')">Propellers</button>
+    <button onclick="filterProducts('body')">Body</button>
+  </div>
+
+  <section class="product-container">
+    
+    <div class="card" data-category="battery">
+      <img src="drone2.png" alt="Battery">
+      <h2>Battery Pack</h2>
+      <p>High-performance drone battery.</p>
+      <span class="price">999</span>
+      <div class="buttons">
+        <button class="buy">Buy Now</button>
+        <button class="cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-category="motor">
+      <img src="drone2.png" alt="Motor">
+      <h2>Drone Motor</h2>
+      <p>Powerful brushless motor.</p>
+      <span class="price">1499</span>
+      <div class="buttons">
+        <button class="buy">Buy Now</button>
+        <button class="cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-category="wire">
+      <img src="drone2.png" alt="Wire">
+      <h2>Wiring Kit</h2>
+      <p>High-quality drone wiring.</p>
+      <span class="price">499</span>
+      <div class="buttons">
+        <button class="buy">Buy Now</button>
+        <button class="cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-category="propeller">
+      <img src="drone2.png" alt="Propellers">
+      <h2>Drone Propellers</h2>
+      <p>Lightweight and durable propellers.</p>
+      <span class="price">799</span>
+      <div class="buttons">
+        <button class="buy">Buy Now</button>
+        <button class="cart">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="card" data-category="body">
+      <img src="drone2.png" alt="Body">
+      <h2>Drone Body Frame</h2>
+      <p>Lightweight and strong frame.</p>
+      <span class="price">1999</span>
+      <div class="buttons">
+        <button class="buy">Buy Now</button>
+        <button class="cart">Add to Cart</button>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    function filterProducts(category) {
+      let cards = document.querySelectorAll(".card");
+      cards.forEach(card => {
+        if (category === "all" || card.getAttribute("data-category") === category) {
+          card.style.display = "block";
+        } else {
+          card.style.display = "none";
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
